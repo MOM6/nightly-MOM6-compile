@@ -19,4 +19,4 @@ jobs:
       script:
         - git clone https://github.com/NOAA-GFDL/MOM6.git
         - cd MOM6/.testing
-        - make all
+        - make MKMF_TEMPLATE=linux-ubuntu-xenial-gnu.mk all
