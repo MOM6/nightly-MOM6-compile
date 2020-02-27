@@ -17,6 +17,6 @@ addons:
 jobs:
   include:
       script:
-        - git clone https://github.com/NOAA-GFDL/MOM6.git
+        - git clone --recursive https://github.com/NOAA-GFDL/MOM6.git
         - cd MOM6/.testing
         - make MKMF_TEMPLATE=linux-ubuntu-xenial-gnu.mk all
