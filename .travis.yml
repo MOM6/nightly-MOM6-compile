@@ -3,16 +3,18 @@
 
 # This is a not a c-language project but we use the same environment.
 language: c
-dist: xenial
+dist: bionic
 
 addons:
   apt:
     sources:
     - ubuntu-toolchain-r-test
     packages:
-    - tcsh pkg-config netcdf-bin libnetcdf-dev libnetcdff-dev openmpi-bin libopenmpi-dev gfortran
+    - tcsh pkg-config netcdf-bin libnetcdf-dev libnetcdff-dev gfortran
+    - mpich libmpich-dev
     - doxygen graphviz flex bison cmake
     - python-numpy python-netcdf4
+    - bc
 
 jobs:
   include:
